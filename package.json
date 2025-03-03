@@ -1,6 +1,6 @@
 {
   "name": "react-spin-the-wheel",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Simple React component that spins an image to given angle",
   "license": "ISC",
   "author": "",
