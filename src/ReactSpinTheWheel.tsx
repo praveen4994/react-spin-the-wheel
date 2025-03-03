@@ -1,28 +1,6 @@
-import React, { HTMLAttributes, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { forwardRef, useImperativeHandle } from "react";
-
-type ReactSpinTheWheelProps = {
-  wheelImage: string;
-  onSpinEnd: () => void;
-  additionalSpins?: number;
-  initialImageAngle?: number;
-  canvasProps?: HTMLAttributes<HTMLCanvasElement>;
-};
-type SpinFuncProps =
-  | {
-      spinBy: "SLICE";
-      totalSlices: number;
-      targetSliceNumber: number;
-    }
-  | {
-      spinBy: "ANGLE";
-      targetAngle: number;
-    };
-
-// Define the ref type
-type ReactSpinTheWheelRef = {
-  spin: (props: SpinFuncProps) => void;
-};
+import { ReactSpinTheWheelProps, ReactSpinTheWheelRef, SpinFuncProps } from ".";
 
 function degToRadians(deg: number) {
   return (deg * Math.PI) / 180.0;

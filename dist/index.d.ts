@@ -1,4 +1,7 @@
-import React, { HTMLAttributes } from 'react';
+import * as react from 'react';
+import { HTMLAttributes } from 'react';
+
+declare const ReactSpinTheWheel: react.ForwardRefExoticComponent<ReactSpinTheWheelProps & react.RefAttributes<ReactSpinTheWheelRef>>;
 
 type ReactSpinTheWheelProps = {
     wheelImage: string;
@@ -18,6 +21,5 @@ type SpinFuncProps = {
 type ReactSpinTheWheelRef = {
     spin: (props: SpinFuncProps) => void;
 };
-declare const ReactSpinTheWheel: React.ForwardRefExoticComponent<ReactSpinTheWheelProps & React.RefAttributes<ReactSpinTheWheelRef>>;
 
-export { ReactSpinTheWheel as default, ReactSpinTheWheelProps, SpinFuncProps, ReactSpinTheWheelRef};
+export { type ReactSpinTheWheelProps, type ReactSpinTheWheelRef, type SpinFuncProps, ReactSpinTheWheel as default };
