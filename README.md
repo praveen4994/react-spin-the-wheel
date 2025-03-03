@@ -65,7 +65,7 @@ The Spin function accepts an object of type SpinFuncProps, which includes:
 - targetAngle: Final target angle where the image should stop
   in case of spinBy=SLICE
 - totalSlices: Total number of slices/sections in the wheel image (All the slices should be of same proportion).
-- targetSliceNumber: Final slice/section where the spin should stop (assumption is pointer is on top)
+- targetSliceNumber: Final slice/section where the spin should stop (assumption is pointer is on top & the slice numbers go anti-clockwise)
 
 ## Example
 
