@@ -1,14 +1,14 @@
 import React, { HTMLAttributes, useEffect, useRef, useState } from "react";
 import { forwardRef, useImperativeHandle } from "react";
 
-export type ReactSpinTheWheelProps = {
+type ReactSpinTheWheelProps = {
   wheelImage: string;
   onSpinEnd: () => void;
   additionalSpins?: number;
   initialImageAngle?: number;
   canvasProps?: HTMLAttributes<HTMLCanvasElement>;
 };
-export type SpinFuncProps =
+type SpinFuncProps =
   | {
       spinBy: "SLICE";
       totalSlices: number;
@@ -20,7 +20,7 @@ export type SpinFuncProps =
     };
 
 // Define the ref type
-export type ReactSpinTheWheelRef = {
+type ReactSpinTheWheelRef = {
   spin: (props: SpinFuncProps) => void;
 };
 

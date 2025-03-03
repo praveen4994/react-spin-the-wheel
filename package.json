@@ -1,6 +1,6 @@
 {
   "name": "react-spin-the-wheel",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Simple React component that spins an image to given angle",
   "license": "ISC",
   "author": "",
@@ -9,16 +9,24 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "rollup": "rollup -c --bundleConfigAsCjs"
+    "build": "npm run check && rm -rf ./dist && tsc --build",
+    "lint": "npx eslint ./src",
+    "lint-fix": "npx eslint ./src --fix",
+    "format": "npx prettier . --write",
+    "check": "npm run lint && npm run format",
+    "rollup": "rollup -c --bundleConfigAsCjs",
+    "publish-patch": "npm run rollup && npm version patch && npm publish",
+    "publish-minor": "npm run rollup && npm version minor && npm publish",
+    "publish-major": "npm run rollup && npm version major && npm publish",
+    "update": "npx npm-check-updates -u && npm install"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
-    "@types/react": "^19.0.10",
-    "react": "^19.0.0",
+    "@types/react": "^18.0.33",
+    "react": "^18.2.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.8.1",
